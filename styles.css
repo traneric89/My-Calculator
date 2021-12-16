@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+}
+
+body {
+  box-sizing: border-box;
+  background: linear-gradient(to right, #a79793, #e7d1cc);
+  margin: 0;
+  padding: 0;
+}
+
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 95vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid rgb(126, 107, 107);
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  background-color: rgb(100, 73, 53, 0.6);
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.fa-github {
+  color: black;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
